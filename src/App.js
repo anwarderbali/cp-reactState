@@ -25,8 +25,8 @@ componentDidMount() {
 } , 5000);}
 
   render() {    
-    // const [timer,setTimer]=useState(0);
 
+    
     return (
       <div id="container">
 
