@@ -9,7 +9,6 @@ export default class PersonnelProfil extends Component {
     return (
       <div style={{fontSize:"50px" , border:"3px solid hsl(350, 71%, 80%)",borderRadius:"10px"}}>PersonnelProfil <br/>
       <img src={fleur} width="100px"  alt="" style={{borderRadius:"10px" ,paddingLeft:"110px"}} />
-      
       </div>
     )
   }
