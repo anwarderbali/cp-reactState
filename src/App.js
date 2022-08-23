@@ -20,10 +20,6 @@ class App extends Component {
   Handleshow= () => {
   this.setState( prevState=>({show: !prevState.show}))
   }
-componentDidMount() {
-  console.log("cdm")
-  setInterval(() => {this.setState({ time: this.state.time + 1 });
-} , 5000);}
 
 
   render() {    
@@ -40,8 +36,14 @@ componentDidMount() {
         {console.log(this.state.show)}
         <button onClick={this.Handleshow} style={{height:"50px",borderRadius:"15px" , fontSize:"25px",  backgroundColor:'pink', border: "2px solid pink "}}>Click To Change</button> <br/>
         {console.log(this.state.show)}
-        {this.state.show ? <PersonnelProfil  /> : null} <br/>
-        <button style={{height:"50px",borderRadius:"15px" ,fontSize:"25px",  backgroundColor:'yellow', border: "2px solid pink "}}>time : {this.state.time} sec</button>
+        {this.state.show ? <PersonnelProfil 
+        fullName={this.state.Person.fullName}
+        bio={this.state.Person.bio}
+        profession={this.state.Person.profession}
+        /> : <h1>profil did found</h1>} <br/>
+
+
+        
       </div>
     );
   }
